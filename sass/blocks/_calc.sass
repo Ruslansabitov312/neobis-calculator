@@ -1,0 +1,33 @@
+.calculator-grid
+  display: grid
+  justify-content: center
+  align-content: center
+  min-height: 100vh
+  grid-template-columns: repeat(4,100px)
+  grid-template-rows: minmax(120px, auto)repeat(5, 100px)
+  & > button
+    cursor: pointer
+    font-size: 2rem
+    border: 1px solid white
+    outline: none
+    background-color: $gray
+    &:hover
+      background-color: $btn-hover-color
+.span-two
+  grid-column: span 2
+.output
+  grid-column: 1 / -1
+  background-color: $calc-display-bg
+  display: flex
+  align-items: flex-end
+  justify-content: space-around
+  flex-direction: column
+  padding: 10px
+  word-wrap: break-word
+  word-break: break-all
+  &__previous-operand
+    color: $gray
+    font-size: 1.5rem
+  &__current-operand
+    color: $white
+    font-size: 2.5rem
